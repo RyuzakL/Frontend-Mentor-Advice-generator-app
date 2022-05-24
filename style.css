@@ -1,0 +1,151 @@
+*::before,
+*::after,
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body 
+{
+	font-family: 'Manrope', sans-serif;
+	background-color: hsl(218, 23%, 16%);
+	color: hsl(193, 38%, 86%);
+	font-size: 1em;
+}
+
+.container 
+{
+	position: relative;
+	top: 15vh;
+	max-width: 500px;
+	width: 90%;
+	height: 300px;
+	margin: 0 auto;
+	background-color: hsl(217, 19%, 24%);
+	border-radius: 15px;
+	padding: 2rem 1rem 1.5rem;
+	text-align: center;
+	font-weight: bold;
+	filter: drop-shadow(0 3rem 35px rgba(0, 0, 0, 0.35));
+}
+
+.app__advice 
+{
+	color: hsl(150, 100%, 66%);
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: .7rem;
+	margin-bottom: 1rem;
+	letter-spacing: .2rem;
+	filter: drop-shadow(0 0 9px hsla(150, 100%, 66%, 0.308));
+}
+
+.app__quote__wrapper 
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 160px;
+}
+
+
+.app__quote,
+.app__id
+{
+	transition: all 200ms ease-in; 
+}
+
+.app__quote::before 
+{
+	content: '" ';
+}
+
+.app__quote::after
+{
+	content: ' "';
+}
+
+.app__divider
+{
+	display: block;
+	margin-bottom: 2rem;
+}
+
+.divider 
+{
+	margin: 0 auto;
+}
+
+.app__btn
+{
+	background-color: blue;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%) translateY(50%);
+	display: block;
+	background-color: hsl(150, 100%, 66%);
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	padding: .8rem;
+	border-radius: 300px;
+	transition: all 150ms ease;
+}
+
+.pc--divider 
+{
+	display: none;
+}
+
+.attribution 
+{ 
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: .9rem; 
+	text-align: center; 
+}
+
+.attribution a 
+{ 
+	color: hsl(228, 45%, 44%); 
+}
+
+.app__btn:hover
+{
+	cursor: pointer;
+	filter: drop-shadow(0 0 20px hsla(150, 100%, 66%, 0.75));
+}
+
+.app__btn:active 
+{
+	transform: scale(.9) translateX(-55%) translateY(55%);
+	transition: 100ms all ease;
+}
+
+@media screen and (min-width: 800px) {
+
+	.pc--divider 
+	{
+		display: block;
+	}
+
+	.mobile--divider
+	{
+		display: none;
+	}
+
+	.app__advice
+	{
+		font-size: .85rem;
+	}
+
+	.app__quote__wrapper 
+	{
+		padding: 0 2rem;
+	}
+}
